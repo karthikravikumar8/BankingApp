@@ -21,7 +21,18 @@
 		FBC6A8842A8C06AB00A2B62D /* RecentTransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6A8832A8C06AB00A2B62D /* RecentTransactionList.swift */; };
 		FBC6A8862A8C0A7D00A2B62D /* TransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6A8852A8C0A7D00A2B62D /* TransactionList.swift */; };
 		FBC6A8892A8C0BE600A2B62D /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = FBC6A8882A8C0BE600A2B62D /* Collections */; };
+		FBC6A8962A8C204E00A2B62D /* BankingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6A8952A8C204E00A2B62D /* BankingAppTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FBC6A8972A8C204E00A2B62D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FBC6A85C2A8BEDE000A2B62D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FBC6A8632A8BEDE000A2B62D;
+			remoteInfo = BankingApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FBC6A8642A8BEDE000A2B62D /* BankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +49,8 @@
 		FBC6A8812A8C033000A2B62D /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
 		FBC6A8832A8C06AB00A2B62D /* RecentTransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactionList.swift; sourceTree = "<group>"; };
 		FBC6A8852A8C0A7D00A2B62D /* TransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionList.swift; sourceTree = "<group>"; };
+		FBC6A8932A8C204E00A2B62D /* BankingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBC6A8952A8C204E00A2B62D /* BankingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingAppTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +62,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FBC6A8902A8C204E00A2B62D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -56,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				FBC6A8662A8BEDE000A2B62D /* BankingApp */,
+				FBC6A8942A8C204E00A2B62D /* BankingAppTests */,
 				FBC6A8652A8BEDE000A2B62D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				FBC6A8642A8BEDE000A2B62D /* BankingApp.app */,
+				FBC6A8932A8C204E00A2B62D /* BankingAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,16 +93,11 @@
 		FBC6A8662A8BEDE000A2B62D /* BankingApp */ = {
 			isa = PBXGroup;
 			children = (
-				FBC6A8672A8BEDE000A2B62D /* BankingApp.swift */,
-				FBC6A8832A8C06AB00A2B62D /* RecentTransactionList.swift */,
-				FBC6A8692A8BEDE000A2B62D /* ContentView.swift */,
-				FBC6A8852A8C0A7D00A2B62D /* TransactionList.swift */,
-				FBC6A87D2A8BFD3D00A2B62D /* APIClient.swift */,
-				FBC6A87F2A8BFDF500A2B62D /* TransactionService.swift */,
-				FBC6A8812A8C033000A2B62D /* TransactionListViewModel.swift */,
-				FBC6A8772A8BF92F00A2B62D /* TransactionModel.swift */,
-				FBC6A8752A8BF23B00A2B62D /* Extensions.swift */,
-				FBC6A87B2A8BFB5700A2B62D /* TransactionRow.swift */,
+				FBC6A88E2A8C130E00A2B62D /* utility */,
+				FBC6A88D2A8C12F800A2B62D /* model */,
+				FBC6A88C2A8C12E900A2B62D /* viewmodel */,
+				FBC6A88B2A8C12D100A2B62D /* Network */,
+				FBC6A88A2A8C12A200A2B62D /* view */,
 				FBC6A86B2A8BEDE400A2B62D /* Assets.xcassets */,
 				FBC6A86D2A8BEDE400A2B62D /* Preview Content */,
 			);
@@ -94,6 +111,59 @@
 				FBC6A8792A8BF9BD00A2B62D /* PreviewData.swift */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FBC6A88A2A8C12A200A2B62D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				FBC6A8672A8BEDE000A2B62D /* BankingApp.swift */,
+				FBC6A8832A8C06AB00A2B62D /* RecentTransactionList.swift */,
+				FBC6A8692A8BEDE000A2B62D /* ContentView.swift */,
+				FBC6A8852A8C0A7D00A2B62D /* TransactionList.swift */,
+				FBC6A87B2A8BFB5700A2B62D /* TransactionRow.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		FBC6A88B2A8C12D100A2B62D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FBC6A87D2A8BFD3D00A2B62D /* APIClient.swift */,
+				FBC6A87F2A8BFDF500A2B62D /* TransactionService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FBC6A88C2A8C12E900A2B62D /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				FBC6A8812A8C033000A2B62D /* TransactionListViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		FBC6A88D2A8C12F800A2B62D /* model */ = {
+			isa = PBXGroup;
+			children = (
+				FBC6A8772A8BF92F00A2B62D /* TransactionModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		FBC6A88E2A8C130E00A2B62D /* utility */ = {
+			isa = PBXGroup;
+			children = (
+				FBC6A8752A8BF23B00A2B62D /* Extensions.swift */,
+			);
+			path = utility;
+			sourceTree = "<group>";
+		};
+		FBC6A8942A8C204E00A2B62D /* BankingAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				FBC6A8952A8C204E00A2B62D /* BankingAppTests.swift */,
+			);
+			path = BankingAppTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +189,24 @@
 			productReference = FBC6A8642A8BEDE000A2B62D /* BankingApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FBC6A8922A8C204E00A2B62D /* BankingAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBC6A8992A8C204E00A2B62D /* Build configuration list for PBXNativeTarget "BankingAppTests" */;
+			buildPhases = (
+				FBC6A88F2A8C204E00A2B62D /* Sources */,
+				FBC6A8902A8C204E00A2B62D /* Frameworks */,
+				FBC6A8912A8C204E00A2B62D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FBC6A8982A8C204E00A2B62D /* PBXTargetDependency */,
+			);
+			name = BankingAppTests;
+			productName = BankingAppTests;
+			productReference = FBC6A8932A8C204E00A2B62D /* BankingAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -131,6 +219,10 @@
 				TargetAttributes = {
 					FBC6A8632A8BEDE000A2B62D = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					FBC6A8922A8C204E00A2B62D = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = FBC6A8632A8BEDE000A2B62D;
 					};
 				};
 			};
@@ -151,6 +243,7 @@
 			projectRoot = "";
 			targets = (
 				FBC6A8632A8BEDE000A2B62D /* BankingApp */,
+				FBC6A8922A8C204E00A2B62D /* BankingAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -162,6 +255,13 @@
 			files = (
 				FBC6A86F2A8BEDE400A2B62D /* Preview Assets.xcassets in Resources */,
 				FBC6A86C2A8BEDE400A2B62D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBC6A8912A8C204E00A2B62D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +286,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FBC6A88F2A8C204E00A2B62D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBC6A8962A8C204E00A2B62D /* BankingAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FBC6A8982A8C204E00A2B62D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FBC6A8632A8BEDE000A2B62D /* BankingApp */;
+			targetProxy = FBC6A8972A8C204E00A2B62D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FBC6A8702A8BEDE400A2B62D /* Debug */ = {
@@ -359,6 +475,40 @@
 			};
 			name = Release;
 		};
+		FBC6A89A2A8C204E00A2B62D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.learning.BankingAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BankingApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BankingApp";
+			};
+			name = Debug;
+		};
+		FBC6A89B2A8C204E00A2B62D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.learning.BankingAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BankingApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BankingApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -376,6 +526,15 @@
 			buildConfigurations = (
 				FBC6A8732A8BEDE400A2B62D /* Debug */,
 				FBC6A8742A8BEDE400A2B62D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBC6A8992A8C204E00A2B62D /* Build configuration list for PBXNativeTarget "BankingAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBC6A89A2A8C204E00A2B62D /* Debug */,
+				FBC6A89B2A8C204E00A2B62D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

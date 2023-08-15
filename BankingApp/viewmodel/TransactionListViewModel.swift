@@ -31,14 +31,19 @@ final class TransactionListViewModel: ObservableObject {
     }
     
     func groupTransactionsByMonth() -> TransactionGroup {
-        guard !transactions.isEmpty else {
-            return [:]
-        }
-
-        let groupedTransactions = TransactionGroup(grouping: transactions) {
-            $0.month
-        }
-
+        guard !transactions.isEmpty else { return [:] }
+        
+        let groupedTransactions = TransactionGroup(grouping: transactions) { $0.month }
+        
+        //print(groupedTransactions)
+        
         return groupedTransactions
+    }
+    
+    func calculateCumulativeBalance(transaction: [Transaction]) -> Double {
+        
+        guard !transaction.isEmpty else { return 0.0 }
+        
+        return transaction.reduce(0.0) {$0 + $1.signedAmount}
     }
 }

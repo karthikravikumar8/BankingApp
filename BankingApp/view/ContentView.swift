@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    //@EnvironmentObject var transactionListVM: TransactionListViewModel
     var body: some View {
         VStack {
             NavigationView {
