@@ -12,6 +12,8 @@
 		FBC6A86C2A8BEDE400A2B62D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBC6A86B2A8BEDE400A2B62D /* Assets.xcassets */; };
 		FBC6A86F2A8BEDE400A2B62D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBC6A86E2A8BEDE400A2B62D /* Preview Assets.xcassets */; };
 		FBC6A8762A8BF23B00A2B62D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6A8752A8BF23B00A2B62D /* Extensions.swift */; };
+		FBC6A8782A8BF92F00A2B62D /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6A8772A8BF92F00A2B62D /* TransactionModel.swift */; };
+		FBC6A87A2A8BF9BD00A2B62D /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6A8792A8BF9BD00A2B62D /* PreviewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		FBC6A86B2A8BEDE400A2B62D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBC6A86E2A8BEDE400A2B62D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FBC6A8752A8BF23B00A2B62D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FBC6A8772A8BF92F00A2B62D /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		FBC6A8792A8BF9BD00A2B62D /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			children = (
 				FBC6A8672A8BEDE000A2B62D /* BankingApp.swift */,
 				FBC6A8692A8BEDE000A2B62D /* ContentView.swift */,
+				FBC6A8772A8BF92F00A2B62D /* TransactionModel.swift */,
 				FBC6A8752A8BF23B00A2B62D /* Extensions.swift */,
 				FBC6A86B2A8BEDE400A2B62D /* Assets.xcassets */,
 				FBC6A86D2A8BEDE400A2B62D /* Preview Content */,
@@ -66,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				FBC6A86E2A8BEDE400A2B62D /* Preview Assets.xcassets */,
+				FBC6A8792A8BF9BD00A2B62D /* PreviewData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -140,6 +146,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBC6A87A2A8BF9BD00A2B62D /* PreviewData.swift in Sources */,
+				FBC6A8782A8BF92F00A2B62D /* TransactionModel.swift in Sources */,
 				FBC6A86A2A8BEDE000A2B62D /* ContentView.swift in Sources */,
 				FBC6A8762A8BF23B00A2B62D /* Extensions.swift in Sources */,
 				FBC6A8682A8BEDE000A2B62D /* BankingApp.swift in Sources */,
