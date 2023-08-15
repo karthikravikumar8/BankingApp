@@ -18,6 +18,7 @@ struct ContentView: View {
                 .navigationBarTitleDisplayMode(.inline)
             }
             .navigationViewStyle(.stack)
+            .accentColor(.primary)
         }
     }
 }

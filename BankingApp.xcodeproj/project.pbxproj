@@ -19,6 +19,8 @@
 		FBC6A8802A8BFDF500A2B62D /* TransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6A87F2A8BFDF500A2B62D /* TransactionService.swift */; };
 		FBC6A8822A8C033000A2B62D /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6A8812A8C033000A2B62D /* TransactionListViewModel.swift */; };
 		FBC6A8842A8C06AB00A2B62D /* RecentTransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6A8832A8C06AB00A2B62D /* RecentTransactionList.swift */; };
+		FBC6A8862A8C0A7D00A2B62D /* TransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6A8852A8C0A7D00A2B62D /* TransactionList.swift */; };
+		FBC6A8892A8C0BE600A2B62D /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = FBC6A8882A8C0BE600A2B62D /* Collections */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,7 @@
 		FBC6A87F2A8BFDF500A2B62D /* TransactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionService.swift; sourceTree = "<group>"; };
 		FBC6A8812A8C033000A2B62D /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
 		FBC6A8832A8C06AB00A2B62D /* RecentTransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactionList.swift; sourceTree = "<group>"; };
+		FBC6A8852A8C0A7D00A2B62D /* TransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBC6A8892A8C0BE600A2B62D /* Collections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +74,7 @@
 				FBC6A8672A8BEDE000A2B62D /* BankingApp.swift */,
 				FBC6A8832A8C06AB00A2B62D /* RecentTransactionList.swift */,
 				FBC6A8692A8BEDE000A2B62D /* ContentView.swift */,
+				FBC6A8852A8C0A7D00A2B62D /* TransactionList.swift */,
 				FBC6A87D2A8BFD3D00A2B62D /* APIClient.swift */,
 				FBC6A87F2A8BFDF500A2B62D /* TransactionService.swift */,
 				FBC6A8812A8C033000A2B62D /* TransactionListViewModel.swift */,
@@ -107,6 +112,9 @@
 			dependencies = (
 			);
 			name = BankingApp;
+			packageProductDependencies = (
+				FBC6A8882A8C0BE600A2B62D /* Collections */,
+			);
 			productName = BankingApp;
 			productReference = FBC6A8642A8BEDE000A2B62D /* BankingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -135,6 +143,9 @@
 				Base,
 			);
 			mainGroup = FBC6A85B2A8BEDE000A2B62D;
+			packageReferences = (
+				FBC6A8872A8C0BE600A2B62D /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = FBC6A8652A8BEDE000A2B62D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -165,6 +176,7 @@
 				FBC6A87E2A8BFD3D00A2B62D /* APIClient.swift in Sources */,
 				FBC6A8802A8BFDF500A2B62D /* TransactionService.swift in Sources */,
 				FBC6A8782A8BF92F00A2B62D /* TransactionModel.swift in Sources */,
+				FBC6A8862A8C0A7D00A2B62D /* TransactionList.swift in Sources */,
 				FBC6A8822A8C033000A2B62D /* TransactionListViewModel.swift in Sources */,
 				FBC6A86A2A8BEDE000A2B62D /* ContentView.swift in Sources */,
 				FBC6A87C2A8BFB5700A2B62D /* TransactionRow.swift in Sources */,
@@ -369,6 +381,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FBC6A8872A8C0BE600A2B62D /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FBC6A8882A8C0BE600A2B62D /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBC6A8872A8C0BE600A2B62D /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FBC6A85C2A8BEDE000A2B62D /* Project object */;
 }
