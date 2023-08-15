@@ -1,6 +1,6 @@
 import Foundation
 
-struct Transaction: Identifiable, Decodable {
+struct Transaction: Identifiable, Decodable, Hashable {
     let id: Int
     let date: String
     var merchant: String
