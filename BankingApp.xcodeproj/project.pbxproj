@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FB604FF42A8CBE52003B4E31 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = FB604FF32A8CBE51003B4E31 /* SwiftUICharts */; };
+		FB604FF82A8CE3DB003B4E31 /* TransactionList.json in Resources */ = {isa = PBXBuildFile; fileRef = FB604FF72A8CE3DB003B4E31 /* TransactionList.json */; };
 		FBC6A8682A8BEDE000A2B62D /* BankingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6A8672A8BEDE000A2B62D /* BankingApp.swift */; };
 		FBC6A86A2A8BEDE000A2B62D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6A8692A8BEDE000A2B62D /* ContentView.swift */; };
 		FBC6A86C2A8BEDE400A2B62D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBC6A86B2A8BEDE400A2B62D /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB604FF72A8CE3DB003B4E31 /* TransactionList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TransactionList.json; sourceTree = "<group>"; };
 		FBC6A8642A8BEDE000A2B62D /* BankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBC6A8672A8BEDE000A2B62D /* BankingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingApp.swift; sourceTree = "<group>"; };
 		FBC6A8692A8BEDE000A2B62D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		FBC6A8662A8BEDE000A2B62D /* BankingApp */ = {
 			isa = PBXGroup;
 			children = (
+				FB604FF72A8CE3DB003B4E31 /* TransactionList.json */,
 				FBC6A88E2A8C130E00A2B62D /* utility */,
 				FBC6A88D2A8C12F800A2B62D /* model */,
 				FBC6A88C2A8C12E900A2B62D /* viewmodel */,
@@ -257,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB604FF82A8CE3DB003B4E31 /* TransactionList.json in Resources */,
 				FBC6A86F2A8BEDE400A2B62D /* Preview Assets.xcassets in Resources */,
 				FBC6A86C2A8BEDE400A2B62D /* Assets.xcassets in Resources */,
 			);

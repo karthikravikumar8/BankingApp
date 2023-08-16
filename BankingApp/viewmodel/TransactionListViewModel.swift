@@ -21,6 +21,7 @@ final class TransactionListViewModel: ObservableObject {
             switch completion {
             case .failure(let error):
                 print("Error fetching transactions:", error.localizedDescription)
+                self.loadLocalJSONFile()
             case .finished:
                 print("Finished fetching transactions")
             }
@@ -71,6 +72,20 @@ final class TransactionListViewModel: ObservableObject {
             
         }
         return cumulativeSum
+    }
+    
+    func loadLocalJSONFile() {
+        guard let url = Bundle.main.url(forResource: "TransactionList", withExtension: "json") else {
+            return
+        }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            transactions = try decoder.decode([Transaction].self, from: data)
+        } catch {
+            print("Error fetching local transactions:")
+        }
     }
     
 }

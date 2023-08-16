@@ -4,7 +4,8 @@ import Combine
 
 class TransactionService: APIClient {
     func getTransactions() -> AnyPublisher<[Transaction], Error> {
-        let urlString = "https://mocki.io/v1/b956988d-c524-404e-818e-b91ed1c54563"
+        let urlString = "https://mocki.io"
+        //"https://mocki.io/v1/b956988d-c524-404e-818e-b91ed1c54563"
         
         let url = URL(string: urlString)!
         
