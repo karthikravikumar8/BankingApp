@@ -8,7 +8,6 @@ typealias TransactionPrefixSum = [(String, Double)]
 final class TransactionListViewModel: ObservableObject {
     @Published var transactions: [Transaction] = []
     private var cancellables = Set<AnyCancellable>()
-    
     private let transactionService: APIClient
     
     init(transactionService: APIClient) {
@@ -27,25 +26,18 @@ final class TransactionListViewModel: ObservableObject {
             }
         } receiveValue: { [weak self] result in
             self?.transactions = result
-            //dump(self?.transactions)
         }
         .store(in: &cancellables)
     }
     
     func groupTransactionsByMonth() -> TransactionGroup {
         guard !transactions.isEmpty else { return [:] }
-        
         let groupedTransactions = TransactionGroup(grouping: transactions) { $0.month }
-        
-        //print(groupedTransactions)
-        
         return groupedTransactions
     }
     
     func calculateCumulativeBalance() -> Double {
-        //transaction: [Transaction]
         guard !transactions.isEmpty else { return 0.0 }
-        
         return transactions.reduce(0.0) {$0 + $1.signedAmount}
     }
     
@@ -54,9 +46,9 @@ final class TransactionListViewModel: ObservableObject {
             return []
         }
         
+        // it can be Date() for real time data.
         let today = "08/16/2023".dateParsed()
         let dateInterval = Calendar.current.dateInterval(of: .month, for: today)!
-        print("dateInterval", dateInterval)
         
         var sum: Double = .zero
         var cumulativeSum = TransactionPrefixSum()
@@ -68,17 +60,18 @@ final class TransactionListViewModel: ObservableObject {
             sum += dailyTotal
             sum = sum.roundedTo2Digits()
             cumulativeSum.append((date.formatted(), sum))
-            print(date.formatted(), "dailyTotal:", dailyTotal, "sum:", sum)
-            
         }
         return cumulativeSum
     }
     
-    func loadLocalJSONFile() {
+    func calculateMonthlyBalance(transactions: [Transaction]) -> Double {
+        return transactions.reduce(0.0) { $0 + $1.signedAmount }
+    }
+    
+    private func loadLocalJSONFile() {
         guard let url = Bundle.main.url(forResource: "TransactionList", withExtension: "json") else {
             return
         }
-        
         do {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
@@ -87,5 +80,4 @@ final class TransactionListViewModel: ObservableObject {
             print("Error fetching local transactions:")
         }
     }
-    
 }

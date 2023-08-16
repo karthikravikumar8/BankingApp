@@ -97,12 +97,12 @@
 		FBC6A8662A8BEDE000A2B62D /* BankingApp */ = {
 			isa = PBXGroup;
 			children = (
-				FB604FF72A8CE3DB003B4E31 /* TransactionList.json */,
 				FBC6A88E2A8C130E00A2B62D /* utility */,
 				FBC6A88D2A8C12F800A2B62D /* model */,
 				FBC6A88C2A8C12E900A2B62D /* viewmodel */,
 				FBC6A88B2A8C12D100A2B62D /* Network */,
 				FBC6A88A2A8C12A200A2B62D /* view */,
+				FB604FF72A8CE3DB003B4E31 /* TransactionList.json */,
 				FBC6A86B2A8BEDE400A2B62D /* Assets.xcassets */,
 				FBC6A86D2A8BEDE400A2B62D /* Preview Content */,
 			);

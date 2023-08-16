@@ -18,7 +18,7 @@ struct TransactionRow: View {
             
             Spacer()
             
-            Text(transation.signedAmount, format: .currency(code: "EUR"))
+            Text("\(transation.signedAmount, specifier: "%.2f €")")
                 .bold()
                 .foregroundColor(transation.type == TransactionType.credit.rawValue ? Color.text : .primary)
             

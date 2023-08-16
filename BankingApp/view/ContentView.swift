@@ -10,9 +10,10 @@ struct ContentView: View {
                     VStack(alignment: .leading, spacing: 24) {
                         let balance = transactionListVM.calculateCumulativeBalance()
                         let data = transactionListVM.accumulateTransactions()
-                        Text("Overview")
-                            .font(.title2)
+                        Text("Transaction Overview")
+                            .font(.title)
                             .bold()
+                        
                         HStack {
                             Text("Balance")
                                 .font(.title2)
@@ -24,27 +25,27 @@ struct ContentView: View {
                                 .font(.title2)
                                 .bold()
                         }
-
-                       // Mark: Title
-                       Text("Monthly Balance")
-                           .font(.title2)
-                           .bold()
-                                               
-                       if !data.isEmpty {
-                           let totalExpenses = data.last?.1 ?? 0
-                           
-                           CardView {
-                               VStack(alignment: .leading) {
-                                   ChartLabel(totalExpenses.formatted(.currency(code: "EUR")), type: .title, format: "%.02f €")
-                                   BarChart()
-                               }
-                               .background(Color.systemBackground)
-                           }
-                           .data(data)
-                           .chartStyle(ChartStyle(backgroundColor: Color.systemBackground, foregroundColor: ColorGradient(Color.icon.opacity(0.4), Color.icon)))
-                           .frame(height: 300)
-                       }
-                       
+                        
+                        // Mark: Title
+                        Text("Monthly Balance")
+                            .font(.title2)
+                            .bold()
+                        
+                        if !data.isEmpty {
+                            let totalExpenses = data.last?.1 ?? 0
+                            
+                            CardView {
+                                VStack(alignment: .leading) {
+                                    ChartLabel("\(totalExpenses) €")
+                                    BarChart()
+                                }
+                                .background(Color.systemBackground)
+                            }
+                            .data(data)
+                            .chartStyle(ChartStyle(backgroundColor: Color.systemBackground, foregroundColor: ColorGradient(Color.icon.opacity(0.4), Color.icon)))
+                            .frame(height: 300)
+                        }
+                        
                         RecentTransactionList()
                     }
                     .padding()

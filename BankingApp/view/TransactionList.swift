@@ -7,12 +7,21 @@ struct TransactionList: View {
         VStack {
             List {
                 ForEach(Array(transactionListVM.groupTransactionsByMonth()), id: \.key) { month, transactions in
+                    let monthlyBalance = transactionListVM.calculateMonthlyBalance(transactions: transactions)
                     Section {
                         ForEach(transactions) { transaction in
                             TransactionRow(transation: transaction)
                         }
                     } header: {
-                        Text(month)
+                        HStack {
+                            Text(month)
+                                .font(.title3)
+                                .bold()
+                            Spacer()
+                            Text("\(monthlyBalance, specifier: "%.2f €")")
+                                .font(.title3)
+                                .bold()
+                        }
                     }
                     .listSectionSeparator(.hidden)
                 }
