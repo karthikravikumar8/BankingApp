@@ -39,8 +39,31 @@ final class BankingAppTests: XCTestCase {
         XCTAssertNotNil(receivedTransactions)
         XCTAssertEqual(receivedTransactions?.count, 4)
         cancellable.cancel()
-        
-        
+    }
+    
+    func testInvalidResponse() {
+        // given
+        let service: APIClient = MockAPIClientInvalidResponse()
+        let expectation = XCTestExpectation(description: "Fetching transactions from API")
+        var receivedError: Error?
+        // when
+        let cancellable = service.getTransactions().sink(
+            receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    XCTFail("Expected API request to fail")
+                case .failure(let error):
+                    receivedError = error
+                    self.sut.loadLocalJSONFile()
+                }
+                expectation.fulfill()
+            },
+            receiveValue: { _ in }
+        )
+        wait(for: [expectation], timeout: 5.0)
+        // then
+        XCTAssertNotNil(receivedError)
+        cancellable.cancel()
     }
     
     func testGetTransactions_NoResponse() {

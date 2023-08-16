@@ -68,7 +68,7 @@ final class TransactionListViewModel: ObservableObject {
         return transactions.reduce(0.0) { $0 + $1.signedAmount }
     }
     
-    private func loadLocalJSONFile() {
+    func loadLocalJSONFile() {
         guard let url = Bundle.main.url(forResource: "TransactionList", withExtension: "json") else {
             return
         }

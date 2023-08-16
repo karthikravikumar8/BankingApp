@@ -43,3 +43,23 @@ class MockAPIClientGroupedTransactionByMonth: APIClient {
             .eraseToAnyPublisher()
     }
 }
+
+class MockAPIClientInvalidResponse: APIClient {
+    func getTransactions() -> AnyPublisher<[Transaction], Error> {
+        let urlString = "https://"
+        
+        let url = URL(string: urlString)!
+        
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .tryMap { (data, response) -> Data in
+                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                    dump(response)
+                    throw URLError(.badServerResponse)
+                }
+                return data
+            }
+            .decode(type: [Transaction].self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
+    }
+}
