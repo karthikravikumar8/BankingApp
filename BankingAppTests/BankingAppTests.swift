@@ -106,7 +106,11 @@ final class BankingAppTests: XCTestCase {
         let groupTransaction = sut.groupTransactionsByMonth()
         var expectedResult: OrderedDictionary<String, [Transaction]>
         // when
-        expectedResult = ["August 2023": [Transaction(id: 1, date: "08/14/2023", merchant: "Food", amount: 50.0, type: "debit"), Transaction(id: 2, date: "08/1/2023", merchant: "Payroll", amount: 2550.0, type: "credit")], "July 2023": [Transaction(id: 3, date: "07/8/2023", merchant: "Travel", amount: 150.0, type: "debit"), Transaction(id: 4, date: "07/8/2023", merchant: "Travel", amount: 350.0, type: "credit")]]
+        expectedResult = ["elokuu 2023": [Transaction(id: 1, date: "08/14/2023", merchant: "Food", amount: 50.0, type: "debit"), Transaction(id: 2, date: "08/1/2023", merchant: "Payroll", amount: 2550.0, type: "credit")], "heinäkuu 2023": [Transaction(id: 3, date: "07/8/2023", merchant: "Travel", amount: 150.0, type: "debit"), Transaction(id: 4, date: "07/8/2023", merchant: "Travel", amount: 350.0, type: "credit")]]
+        
+        /* Below texts were not working in finnish laptop as it picks months in finnish*/
+        
+        /*expectedResult = ["August 2023": [Transaction(id: 1, date: "08/14/2023", merchant: "Food", amount: 50.0, type: "debit"), Transaction(id: 2, date: "08/1/2023", merchant: "Payroll", amount: 2550.0, type: "credit")], "July 2023": [Transaction(id: 3, date: "07/8/2023", merchant: "Travel", amount: 150.0, type: "debit"), Transaction(id: 4, date: "07/8/2023", merchant: "Travel", amount: 350.0, type: "credit")]]*/
         // then
         XCTAssertEqual(groupTransaction, expectedResult)
     }
