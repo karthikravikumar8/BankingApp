@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB604FF42A8CBE52003B4E31 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = FB604FF32A8CBE51003B4E31 /* SwiftUICharts */; };
 		FBC6A8682A8BEDE000A2B62D /* BankingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6A8672A8BEDE000A2B62D /* BankingApp.swift */; };
 		FBC6A86A2A8BEDE000A2B62D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6A8692A8BEDE000A2B62D /* ContentView.swift */; };
 		FBC6A86C2A8BEDE400A2B62D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBC6A86B2A8BEDE400A2B62D /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBC6A8892A8C0BE600A2B62D /* Collections in Frameworks */,
+				FB604FF42A8CBE52003B4E31 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +186,7 @@
 			name = BankingApp;
 			packageProductDependencies = (
 				FBC6A8882A8C0BE600A2B62D /* Collections */,
+				FB604FF32A8CBE51003B4E31 /* SwiftUICharts */,
 			);
 			productName = BankingApp;
 			productReference = FBC6A8642A8BEDE000A2B62D /* BankingApp.app */;
@@ -237,6 +240,7 @@
 			mainGroup = FBC6A85B2A8BEDE000A2B62D;
 			packageReferences = (
 				FBC6A8872A8C0BE600A2B62D /* XCRemoteSwiftPackageReference "swift-collections" */,
+				FB604FF22A8CBE51003B4E31 /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = FBC6A8652A8BEDE000A2B62D /* Products */;
 			projectDirPath = "";
@@ -542,6 +546,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FB604FF22A8CBE51003B4E31 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = exactVersion;
+				version = "2.0.0-beta.2";
+			};
+		};
 		FBC6A8872A8C0BE600A2B62D /* XCRemoteSwiftPackageReference "swift-collections" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-collections.git";
@@ -553,6 +565,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FB604FF32A8CBE51003B4E31 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB604FF22A8CBE51003B4E31 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
 		FBC6A8882A8C0BE600A2B62D /* Collections */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FBC6A8872A8C0BE600A2B62D /* XCRemoteSwiftPackageReference "swift-collections" */;
