@@ -31,7 +31,7 @@
 9. **See All** navigates to Transactions screen which lists month wise transaction with month wise balance
 
 Screens:
+![Screen1](https://github.com/karthikravikumar8/BankingApp/assets/65198640/5a4cb12b-a501-40db-88a2-9b09facc3452)
+![Screen2](https://github.com/karthikravikumar8/BankingApp/assets/65198640/511fe773-eb76-4df5-86c0-1b94362d401c)
+![Screen3](https://github.com/karthikravikumar8/BankingApp/assets/65198640/659b06fb-3390-45e6-9376-3ae2acec0bf9)
 
-![Screen1](https://github.com/karthikravikumar8/BankingApp/assets/65198640/e5a3fe0a-40d7-4500-8147-7d3b99a263b5)
-![Screen2](https://github.com/karthikravikumar8/BankingApp/assets/65198640/4b00114b-dcaa-4b6a-a95a-f8294a8e74ae)
-![Screen3](https://github.com/karthikravikumar8/BankingApp/assets/65198640/3c3e4b92-41db-47c0-928c-d8b4e41f8f75)
